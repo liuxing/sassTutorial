@@ -1,0 +1,47 @@
+
+// 引入以"_"（下划线）开头的sass文件，他们不会被编译
+@import "Color";
+@import "Base";
+@import "Form";
+@import "Button";
+
+$unit: 1rem !default;  // 设置默认的间隔
+
+body{
+  background-color: $color-tertiary;
+}
+
+// 使用Sass的mixin 注：这里只是为了演示mixin的使用，现在有更好的解决方案autoprefixer
+
+// 参数变量 (Variable Arguments):
+// 有时，不能确定混合指令需要使用多少个参数，
+//可以使用参数变量 … 声明（写在参数的最后方）告诉Sass将这些参数视为值列表处理：
+@mixin transform($prop...){
+  -webkit-transform: $prop;
+  -moz-transform: $prop;
+  -ms-transform: $prop;
+  -o-transform: $prop;
+  transform: $prop;
+}
+
+.login{
+  width: 400px;
+  background-color: $color-initial;
+  padding: $unit*2; // 运算 => 1rem * 2 = 2rem
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  // 使用mixin
+  @include transform(translate(-50%, -50%));
+  // 嵌套
+  input{
+    margin-top: $unit;
+  }
+  button{
+    margin-top: $unit*3;
+  }
+}
+
+// 一个功能有各种实现方式，用sass解决css样式问题也是如此
+// 关于sass的更多姿势，还需要大家自己去探索，
+// 比如说查看一些优秀的sass源码，自己实现一个小的css框架

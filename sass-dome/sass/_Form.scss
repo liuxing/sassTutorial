@@ -1,0 +1,32 @@
+
+// Form
+// ––––––––––––––––––––––––––––––––––––––––––––––––––
+
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='tel'],
+input[type='text'],
+input[type='url'],
+textarea,
+select{
+  appearance: none;
+  background-color: transparent;
+  border: .1rem solid $color-quaternary;
+  border-radius: .4rem;
+  box-shadow: none;
+  box-sizing: inherit;
+  height: 3.8rem;
+  padding: .6rem 1.0rem;
+  width: 100%;
+  &:focus{
+    border-color: $color-primary;
+    outline: 0;
+  }
+}
+
+// 这是对表单样式的简单书写，通常我们将写的更加全面
+// 虽然说在这个小demo中这样写着感觉有点小题大做，
+// 但在一个项目中，我们从一开始就应该有大局观，
+// 开始写的越精致，后面你将做的更少

@@ -100,7 +100,7 @@ gulp.task('sass:watch', function () {
 })
 ```
 
-具体参见[GitHub]()
+具体参见[GitHub](https://github.com/ogilhinn/sassTutorial)
 
 下面我们将快速学习sass的语法
 
@@ -454,4 +454,4 @@ $animal-list: puma, sea-slug, egret, salamander;
 
 ## 实战
 
-传送门： [GitHub]()
+传送门： [GitHub](https://github.com/ogilhinn/sassTutorial)
